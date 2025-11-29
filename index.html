@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePass Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="image.png">
+</head>
+
+<body>
+    <div class="background-mesh"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Password Generator</h1>
+            <p class="subtitle">Create strong, secure passwords instantly.</p>
+        </div>
+
+        <div class="result-container">
+            <span id="result" placeholder="P4$5W0rD!"></span>
+            <button class="btn-icon" id="clipboard" title="Copy to Clipboard">
+                <i class="far fa-copy"></i>
+            </button>
+        </div>
+
+        <div class="settings">
+            <div class="setting-group">
+                <div class="setting-header">
+                    <label>Password Length</label>
+                    <span id="length-val">10</span>
+                </div>
+                <div class="range-container">
+                    <input type="range" id="length" min="4" max="32" value="10">
+                </div>
+            </div>
+
+            <div class="options-grid">
+                <div class="setting-item">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="uppercase" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span class="label-text">Uppercase</span>
+                </div>
+                <div class="setting-item">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="lowercase" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span class="label-text">Lowercase</span>
+                </div>
+                <div class="setting-item">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="numbers" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span class="label-text">Numbers</span>
+                </div>
+                <div class="setting-item">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="symbols" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span class="label-text">Symbols</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-generate" id="generate">
+            Generate Password
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
